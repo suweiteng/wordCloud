@@ -16,7 +16,7 @@ def generate_wordcloud(text):
     font_path=path.join(d,"font//msyh.ttf")
     wc = WordCloud(
         background_color="white",# 设置背景颜色  "silver"
-        color_func=lambda *args, **kwargs: "black" , # 设置字体颜色 
+        #color_func=lambda *args, **kwargs: "black" , # 设置字体颜色 
            max_words=300, # 词云显示的最大词数  
             width=1200,  # 宽度
             height=800,   # 高度
