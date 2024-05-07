@@ -1,21 +1,25 @@
-# wordCloud
+
+
 用python进行文本分词并生成词云
 
-## 需要安装的包
-* `sudo pip3 install jieba`
-* `sudo pip3 install wordcloud`
-* wordcloud包依赖于Pillow，numpy，matplotlib 
 
-## 其他
-* 分词采用结巴分词，并支持自定义字典
-* 分词结果进行词频统计分析，并导出
-* 词云图可自己设定背景图（英文词云图不需先进行分词）
+## 安装
 
-## 运行结果
-运行demo.py,会生成相应的的词云图，和“doc/词频统计.txt”  
-eg:输入“alice.txt”的词云图如下：
-![image](https://raw.githubusercontent.com/fuqiuai/wordCloud/master/Images/alice.png)  
-十九大报告全文的词云图如下：  
-![image](https://raw.githubusercontent.com/fuqiuai/wordCloud/master/Images/十九大.png)
+* `pip3 install jieba`
+* `pip3 install wordcloud`
+
+
+# 运行
+* 运行demo.py,会生成相应的的词云图，和“doc/词频统计.txt”  
+* `python3 demo.py`
+
+
+
+## 说明
+
+
+* 新增词语请写入字典，如不想分割的人名。字典：userdict/userdict.txt
+
+* 默认无意义词库，如'着'等。可自行添加不想纳入统计的词语，：userdict/stopword.txt
 
 
