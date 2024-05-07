@@ -18,8 +18,9 @@
 ## 说明
 
 
-* 新增词语请写入字典，如不想分割的人名。字典：userdict/userdict.txt
+* 新增词语请写入字典，如不想分割的人名。路径：userdict/userdict.txt
 
-* 默认无意义词库，如'着'等。可自行添加不想纳入统计的词语，：userdict/stopword.txt
+* 默认无意义词库，如'着'等。可自行添加不想纳入统计的词语。路径：userdict/stopword.txt
 
 
+![image](https://raw.githubusercontent.com/fuqiuai/wordCloud/master/Images/alice.png)  
