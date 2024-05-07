@@ -10,18 +10,18 @@
 
 
 # 运行
-* 运行demo.py,会生成相应的的词云图，和“doc/词频统计.txt”  
-* txt文件： `python3 demo.py` 
-* docx文件： `python3 demo.py d`
+* 请将文本放入doc文件夹。运行demo.py,会生成相应的的词云图，和“doc/词频统计.txt”。默认读取demo.txt 如有运行时命令有附加参数d，则读取demo.docx。  
+
+* txt文件命令： `python3 demo.py` 
+* docx文件命令： `python3 demo.py d`
 
 
 ## 说明
 
+* 如部分人名等词语被误拆分，可以将其写入词典。路径：userdict/userdict.txt
 
-* 新增词语请写入字典，如不想分割的人名。路径：userdict/userdict.txt
+* 部分字词属于统计上意义较小的词库，如'着' '的' 等。本仓库已内置了一些字词。如仍有不想纳入统计的词语，可自行添加。路径：userdict/stopword.txt
 
-* 默认无意义词库，如'着'等。可自行添加不想纳入统计的词语。路径：userdict/stopword.txt
-
-* 默认读取demo.txt 如有附加参数d 则读取demo.docx
+* 
 
 ![image](https://raw.githubusercontent.com/suweiteng/wordCloud/master/Images/alice.png)  
