@@ -4,7 +4,7 @@ from os import path
 from PIL import Image
 import numpy as np
 import matplotlib.pyplot as plt
-from wordcloud import WordCloud, STOPWORDS
+from wordcloud import WordCloud
 
 def generate_wordcloud(text):
     '''
@@ -14,14 +14,17 @@ def generate_wordcloud(text):
     d=path.dirname(__file__)
     alice_mask = np.array(Image.open(path.join(d, "Images//alice_mask.png")))
     font_path=path.join(d,"font//msyh.ttf")
-    stopwords = set(STOPWORDS)
-    wc = WordCloud(background_color="white",# 设置背景颜色
-           max_words=2000, # 词云显示的最大词数  
-           mask=alice_mask,# 设置背景图片       
-           stopwords=stopwords, # 设置停用词
+    wc = WordCloud(
+        background_color="white",# 设置背景颜色  "silver"
+        color_func=lambda *args, **kwargs: "black" , # 设置字体颜色 
+           max_words=300, # 词云显示的最大词数  
+            width=1200,  # 宽度
+            height=800,   # 高度
+            max_font_size=150, #最大字的最大字体大小
+            min_font_size=10, #最小字体大小
+       #     mask=alice_mask,# 设置背景图片       
            font_path=font_path, # 兼容中文字体，不然中文会显示乱码
                   )
-
     # 生成词云 
     wc.generate(text)
 
@@ -32,5 +35,5 @@ def generate_wordcloud(text):
     plt.imshow(wc, interpolation='bilinear')
     # interpolation='bilinear' 表示插值方法为双线性插值
     plt.axis("off")# 关掉图像的坐标
-    plt.show()
+#     plt.show()
 
