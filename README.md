@@ -23,4 +23,4 @@
 * 默认无意义词库，如'着'等。可自行添加不想纳入统计的词语。路径：userdict/stopword.txt
 
 
-![image](https://raw.githubusercontent.com/fuqiuai/wordCloud/master/Images/alice.png)  
+![image](https://raw.githubusercontent.com/suweiteng/wordCloud/master/Images/alice.png)  
