@@ -24,12 +24,8 @@ def word_segment(text):
             mywordlist.append(myword)
     text = ''.join(mywordlist)
 
-    # 计算每个词出现的频率，并存入txt文件
-    jieba_word=jieba.cut(text,cut_all=False) # cut_all是分词模式，True是全模式，False是精准模式，默认False
-    data=[]
-    for word in jieba_word:
-        data.append(word)
-    dataDict=Counter(data)
+    # 词频存入txt文件
+    dataDict=Counter(mywordlist)
     # 排序
     sorted_data = sorted(dataDict.items(), key=lambda item: item[1], reverse=True)  
     with open('doc//词频统计.txt','w') as fw:

@@ -13,7 +13,7 @@ if __name__=='__main__':
     file_path = 'doc/demo.txt'  #  要读取的文件名称 
     if len(sys.argv) > 1:  
         first_arg = sys.argv[1]  
-        print(f"The first argument is: {first_arg}")
+        # print(f"The first argument is: {first_arg}")
         if first_arg == 'd':
            file_path = 'doc/demo.docx' 
     
