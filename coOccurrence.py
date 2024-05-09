@@ -28,8 +28,6 @@ def generate_wordcloud(text):
     # 构建并显示共现矩阵
     cooccurrence_matrix = build_cooccurrence_matrix(filtered_words, word_to_index)
 
-    cooccurrence_matrix.to_csv('data.csv', index=0, columns=None, encoding='utf_8_sig')
-
     plt.figure(figsize=(10, 8))
     plt.rcParams['font.sans-serif']=['Hiragino Sans GB'] # 修改字体
     plt.rcParams['axes.unicode_minus'] = False # 正常显示负号 
