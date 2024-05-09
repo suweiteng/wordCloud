@@ -1,14 +1,18 @@
 
 
-用python进行文本分词并生成词云，支持txt和docx格式文件。
+1，用python进行文本分词，支持txt和docx格式文件。
+2，生成词云
+3，生成共存矩阵
+
+词云功能和共存矩阵功能可以单独使用，互不影响
 
 ## 安装
-
 * `pip3 install jieba`
 * `pip3 install wordcloud`
 * `pip3 install python-docx`
-
-
+* `pip3 install matplotlib`
+* `pip3 install seaborn`
+* `pip3 install numpy`
 # 运行
 * 请将文本放入doc文件夹。运行demo.py,会生成相应的的词云图，和“doc/词频统计.txt”。默认读取demo.txt， 如运行命令有附加参数d，则读取demo.docx。  
 
