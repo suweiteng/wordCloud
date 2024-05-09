@@ -15,7 +15,7 @@ def generate_wordcloud(text):
     words = text.split()
     # 统计词频并选择全部词，实际应用中应根据需要筛选高频词汇
     word_counts = Counter(words)
-    top_words = word_counts.most_common(50)  # 示例中使用所有词，实际应设定如most_common(50)
+    top_words = word_counts.most_common(40)  # 示例中使用所有词，实际应设定如most_common(50)
 
     # 创建单词到索引的映射，仅包含高频词汇
     word_to_index = {word: idx for idx, (word, _) in enumerate(top_words)}
@@ -24,7 +24,7 @@ def generate_wordcloud(text):
   
     # 过滤words，只保留出现在top_words中的词
     filtered_words = [word for word in words if word in word_to_index]
-    print((filtered_words))
+    # print((filtered_words))
     # 构建并显示共现矩阵
     cooccurrence_matrix = build_cooccurrence_matrix(filtered_words, word_to_index)
 
@@ -35,7 +35,9 @@ def generate_wordcloud(text):
     plt.title('Words Co-occurrence Matrix')
     plt.xlabel('Words')
     plt.ylabel('Words')
-    plt.show()
+    # 使用savefig方法保存图片
+    plt.savefig('images/my_figure.png')
+    #plt.show()
 
 # 构建共现矩阵
 def build_cooccurrence_matrix(filtered_words, word_to_index):
