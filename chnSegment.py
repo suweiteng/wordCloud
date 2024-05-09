@@ -22,7 +22,7 @@ def word_segment(text):
     for myword in liststr.split('/'):  # 去除停顿词，生成新文档
         if not (myword.strip() in f_stop_seg_list) and len(myword.strip()) > 1:
             mywordlist.append(myword)
-    text = ''.join(mywordlist)
+    text = ' '.join(mywordlist)
 
     # 词频存入txt文件
     dataDict=Counter(mywordlist)
@@ -33,10 +33,5 @@ def word_segment(text):
             fw.write("%s,%d\n" % (k,v))
         #  fw.write("%s"%dataDict)
 
-
-    # 返回分词后的结果
-    jieba_word=jieba.cut(text,cut_all=False) # cut_all是分词模式，True是全模式，False是精准模式，默认False
-    
-    seg_list=' '.join(jieba_word)
-    return seg_list
+    return text
 

@@ -4,7 +4,7 @@ from os import path
 from docx import Document 
 import chnSegment
 import plotWordcloud
-
+import coOccurrence
 
 if __name__=='__main__':
 
@@ -36,3 +36,6 @@ if __name__=='__main__':
     
     # 生成词云
     plotWordcloud.generate_wordcloud(text)
+
+    # 共存矩阵
+    coOccurrence.generate_wordcloud(text)

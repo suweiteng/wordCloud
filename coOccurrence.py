@@ -38,7 +38,6 @@ def generate_wordcloud(text):
     # 由于示例数据较少，可能无法展示出50个高频词，实际应用中应有足够数据
     # 为了演示，我们直接使用top_words的keys，即高频词列表
     
-
     # 过滤words，只保留出现在top_words中的词
     filtered_words = [word for word in words if word in word_to_index]
     print((filtered_words))
@@ -62,15 +61,12 @@ def generate_wordcloud(text):
 def build_cooccurrence_matrix(filtered_words, word_to_index):
     cooccur_matrix = defaultdict(lambda: defaultdict(int))
     
-    # 确保只处理存在于高频词汇列表中的词语
-    for i, word1 in enumerate(filtered_words[:-1]):
-        if word1 in word_to_index:
-            word1_idx = word_to_index[word1]
-            for word2 in filtered_words[i+1:]:
-                if word2 in word_to_index:
-                    word2_idx = word_to_index[word2]
-                    cooccur_matrix[word1_idx][word2_idx] += 1
-                    cooccur_matrix[word2_idx][word1_idx] += 1  # 确保共现矩阵对称
+    # 确保只处理存在于高频词汇列表中的词语，并避免重复计数
+    for i in range(len(filtered_words) - 1):
+        word1 = filtered_words[i]
+        word2 = filtered_words[i + 1]
+        if word1 in word_to_index and word2 in word_to_index:
+            cooccur_matrix[word_to_index[word1]][word_to_index[word2]] += 1
 
     vocab_size = len(word_to_index)
     matrix = np.zeros((vocab_size, vocab_size), dtype=int)
@@ -79,7 +75,6 @@ def build_cooccurrence_matrix(filtered_words, word_to_index):
             matrix[i, j] = count
             
     return matrix
-
 
 
 
