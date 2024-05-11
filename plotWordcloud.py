@@ -17,7 +17,7 @@ def generate_wordcloud(text):
     font_path=path.join(d,"font//msyh.ttf")
     wc = WordCloud(
         background_color="white",# 设置背景颜色  "silver"
-        color_func=lambda *args, **kwargs: "black" , # 设置字体颜色 
+        #color_func=lambda *args, **kwargs: "black" , # 设置字体颜色 
         stopwords=stopwords_path, # 设置停用词 无法为空，因此再设置一次停用词
             max_words=100, # 词云显示的最大词数  
             collocations=False, #可防止出现重复
@@ -33,7 +33,8 @@ def generate_wordcloud(text):
     wc.generate(text)
 
     # 生成的词云图像保存到本地
-    wc.to_file(path.join(d, "Images//alice.png"))
+    print("词云图:images/wordCloud.png")
+    wc.to_file(path.join(d, "Images//wordCloud.png"))
 
 
 

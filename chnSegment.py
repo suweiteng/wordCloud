@@ -13,7 +13,7 @@ def word_segment(text):
 
     # 移除一些无意义词语 'stopword.txt'
     mywordlist = []
-    #jieba.suggest_freq(('绿', '衣服'), True) # 人为设定需要拆分的词语
+    jieba.suggest_freq(('绿', '衣裳'), True) # 人为设定需要拆分的词语
     seg_list = jieba.cut(text, cut_all=False)
     liststr = "/".join(seg_list)
     with open(stopwords_path) as f_stop:
