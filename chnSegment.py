@@ -33,6 +33,6 @@ def word_segment(text):
         for k,v in sorted_data:
             fw.write("%s,%d\n" % (k,v))
         #  fw.write("%s"%dataDict)
-
+    print("词频统计:doc/词频统计.txt")    
     return text
 
