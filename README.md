@@ -33,3 +33,6 @@
 ![image](https://raw.githubusercontent.com/suweiteng/wordCloud/master/Images/my_figure.png)  
 ### 共现矩阵关系图
 ![image](https://raw.githubusercontent.com/suweiteng/wordCloud/master/Images/diagram.png)
+
+## 其他
+使用了https://github.com/fuqiuai/wordCloud的部分代码
