@@ -35,4 +35,4 @@
 ![image](https://raw.githubusercontent.com/suweiteng/wordCloud/master/Images/diagram.png)
 
 ## 其他
-使用了https://github.com/fuqiuai/wordCloud的部分代码
+使用了https://github.com/fuqiuai/wordCloud 的部分代码
